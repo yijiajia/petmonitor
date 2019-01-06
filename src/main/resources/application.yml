@@ -1,0 +1,37 @@
+server:
+   port: 8090
+   servlet:
+     context-path: /
+
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update   #create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+#    url: jdbc:mysql://122.152.229.246:3306/petmonitor?characterEncoding=utf8&autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/petmonitor?characterEncoding=utf8&autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: mysql
+#    password: GPNU-IOT107
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+wechat:
+    ma:
+      appid: wx77e18f632393339a
+      secret: 65728109daeba173201fc5191c5a3496
+      token: helloworld
+      aesKey: ceUXsYQFBXPQkpRzR3cSXhk4cPW9iKGevaSbmzFVxH4
+      msgDataFormat: JSON
+
+
+#logging:
+#   file: ../pet_monitor.log
+#   pattern:
+#      console: "%d %-5level %logger : %msg%n"
+#      file: "%d %-5level [%thread] %logger : %msg%n"
+#   level: info
